@@ -16,7 +16,7 @@ public class BoardController {
     BoardServiceImpl boardService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public String boardlist(Model model){
+    public String boardlist( Model model){
         model.addAttribute("list", boardService.getBoardList());
         return "board/list";
     }
