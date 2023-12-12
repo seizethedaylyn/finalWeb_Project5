@@ -10,6 +10,11 @@ public class PlayerDAO {
     @Autowired
     SqlSession sqlSession;
 
+    public int insertPlayer(PlayerVO vo){
+        int result = sqlSession.insert("Player.insertPlayer",vo);
+        return result;
+    }
+
     public List<PlayerVO> getBoardList() {
         List<PlayerVO> list = sqlSession.selectList("Board.getBoardList");
         return list;

@@ -9,6 +9,7 @@ public interface PlayerService {
 //    public BoardVO getBoard(int seq);
 //    public List<BoardVO> getBoardList();
 
+    public int insertPlayer(PlayerVO vo);
     public List<PlayerVO> getBoardList();
 
 }

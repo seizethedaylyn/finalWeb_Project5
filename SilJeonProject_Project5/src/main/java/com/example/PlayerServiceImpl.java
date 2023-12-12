@@ -10,6 +10,16 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Autowired
     PlayerDAO playerdDAO;
+
+    @Override
+    public int insertPlayer(PlayerVO vo){
+        return playerdDAO.insertPlayer(vo);
+    }
+
+    @Override
+    public List<PlayerVO> getBoardList() {
+        return playerdDAO.getBoardList();
+    }
 //
 //
 //    @Override
@@ -32,8 +42,5 @@ public class PlayerServiceImpl implements PlayerService {
 //        return boardDAO.getBoard(seq);
 //    }
 //
-    @Override
-    public List<PlayerVO> getBoardList() {
-        return playerdDAO.getBoardList();
-    }
+
 }
