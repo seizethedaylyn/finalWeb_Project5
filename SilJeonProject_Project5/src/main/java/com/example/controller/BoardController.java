@@ -27,10 +27,10 @@ public class BoardController {
 //        return "board/list";
 //    }
 //
-//    @RequestMapping(value = "/add", method = RequestMethod.GET)
-//    public String addPost(){
-//        return "board/addpostform";
-//    }
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    public String addPost(){
+        return "board/addpostform";
+    }
 //
 //    @RequestMapping(value = "/addok", method = RequestMethod.POST)
 //    public String addPostOK(BoardVO vo){
