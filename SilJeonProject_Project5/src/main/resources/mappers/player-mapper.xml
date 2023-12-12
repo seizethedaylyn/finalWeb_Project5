@@ -8,8 +8,19 @@
         values
         (#{name}, #{birth}, #{team}, #{snsId}, #{awards}, #{position}, #{song}, #{height}, #{weight})
     </insert>
-
+    <update id="updatePlayer">
+        update PLAYER
+        set name=#{name}, birth=#{birth}, team=#{team}, snsId=#{snsId}, awards=#{awards},
+        position=#{position}, song=#{song}, height=#{height}, weight=#{weight}
+        where id=#{id}
+    </update>
+    <delete id="deletePlayer">
+        delete from PLAYER where id=#{id}
+    </delete>
+    <select id="getPlayer" resultType="Player">
+        select * from PLAYER where id = #{id}
+    </select>
     <select id="getPlayerList" resultType="Player">
-        select * from PLAYER where id = #{seq}
+        select * from PLAYER order by id asc
     </select>
 </mapper>
