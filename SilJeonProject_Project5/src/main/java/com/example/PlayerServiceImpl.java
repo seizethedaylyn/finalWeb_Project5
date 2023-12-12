@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BoardServiceImpl implements BoardService {
+public class PlayerServiceImpl implements PlayerService {
 
     @Autowired
-    BoardDAO boardDAO;
+    PlayerDAO playerdDAO;
 //
 //
 //    @Override
@@ -33,7 +33,7 @@ public class BoardServiceImpl implements BoardService {
 //    }
 //
     @Override
-    public List<BoardVO> getBoardList() {
-        return boardDAO.getBoardList();
+    public List<PlayerVO> getBoardList() {
+        return playerdDAO.getBoardList();
     }
 }
