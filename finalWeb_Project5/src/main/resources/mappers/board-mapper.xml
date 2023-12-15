@@ -26,6 +26,6 @@
         select * from PLAYER where id=#{id}
     </select>
     <select id="getBoardList" resultType="board">
-        select * from PLAYER order by id desc
+        select * from PLAYER order by id asc
     </select>
 </mapper>
