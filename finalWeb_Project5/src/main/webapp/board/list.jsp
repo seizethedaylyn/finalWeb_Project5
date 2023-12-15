@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<%@page import="com.example.BoardDAO, com.example.BoardVO,java.util.*" %>
+<%@page import="com.example.BoardDAO, com.example.BoardVO, java.util.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>free board</title>
+    <title>Player List</title>
     <style>
         #list {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -58,45 +58,57 @@
             color: white;
         }
 
-        #myDiv{
+        #myDiv {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
     </style>
     <script>
-        function delete_ok(id) {
+        function delete_ok(playerId) {
             var a = confirm("정말로 삭제하겠습니까?");
-            if (a) location.href = 'deleteok/' + id;
+            if (a) location.href = 'deleteok/' + playerId;
         }
     </script>
 </head>
 <body>
 <div id="myDiv">
-    <h1>자유게시판</h1>
-    <button onclick="location.href='add'" id="button1">Add New Post</button>
+    <h1>Player List</h1>
+    <button onclick="location.href='add'" id="button1">Add New Player</button>
 </div>
 <table id="list" width="90%">
     <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Writer</th>
-        <th>Content</th>
-        <th>Cnt</th>
-        <th>자세히</th>
+        <th>PlayerId</th>
+        <th>Play Group</th>
+        <th>Comment</th>
+        <th>Name</th>
+        <th>Team Name</th>
+        <th>Player Image</th>
+        <th>Position</th>
+        <th>SNS ID</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Song</th>
+        <th>Details</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
     <c:forEach items="${list}" var="u">
         <tr>
-            <td>${u.getSeq()}</td>
-            <td>${u.getTitle()}</td>
-            <td>${u.getWriter()}</td>
-            <td>${u.getContent()}</td>
-            <td>${u.getCnt()}</td>
-            <td><a href="view/${u.seq}">⭐️</a></td>
-            <td><a href="editform/${u.seq}">Edit</a></td>
-            <td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
+            <td>${u.getPlayerId()}</td>
+            <td>${u.getPlayGroup()}</td>
+            <td>${u.getComment()}</td>
+            <td>${u.getName()}</td>
+            <td>${u.getTeamName()}</td>
+            <td>${u.getPlayerImg()}</td>
+            <td>${u.getPosition()}</td>
+            <td>${u.getSnsId()}</td>
+            <td>${u.getHeight()}</td>
+            <td>${u.getWeight()}</td>
+            <td>${u.getSong()}</td>
+            <td><a href="view/${u.playerId}">⭐️</a></td>
+            <td><a href="editform/${u.playerId}">Edit</a></td>
+            <td><a href="javascript:delete_ok('${u.playerId}')">Delete</a></td>
         </tr>
     </c:forEach>
 </table>

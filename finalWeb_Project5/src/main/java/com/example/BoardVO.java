@@ -3,58 +3,103 @@ package com.example;
 import java.util.Date;
 
 public class BoardVO {
-    private int seq;
-    private String title;
-    private String writer;
-    private String content;
-    private Date regdate;
-    private int cnt;
+    private int playerId;
+    private String playGroup;
+    private String comment;
+    private String name;
+    private String teamName;
+    private String playerImg;
+    private String position;
+    private String snsId;
+    private int height;
+    private int weight;
+    private String song;
 
-    public int getSeq() {
-        return seq;
+    public int getPlayerId() {
+        return playerId;
     }
 
-    public void setSeq(int seq) {
-        this.seq = seq;
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
     }
 
-    public String getTitle() {
-        return title;
+    public String getPlayGroup() {
+        return playGroup;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setPlayGroup(String playGroup) {
+        this.playGroup = playGroup;
     }
 
-    public String getWriter() {
-        return writer;
+    public String getComment() {
+        return comment;
     }
 
-    public void setWriter(String writer) {
-        this.writer = writer;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
-    public String getContent() {
-        return content;
+    public String getName() {
+        return name;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Date getRegdate() {
-        return regdate;
+    public String getTeamName() {
+        return teamName;
     }
 
-    public void setRegdate(Date regdate) {
-        this.regdate = regdate;
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
     }
 
-    public int getCnt() {
-        return cnt;
+    public String getPlayerImg() {
+        return playerImg;
     }
 
-    public void setCnt(int cnt) {
-        this.cnt = cnt;
+    public void setPlayerImg(String playerImg) {
+        this.playerImg = playerImg;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public String getSnsId() {
+        return snsId;
+    }
+
+    public void setSnsId(String snsId) {
+        this.snsId = snsId;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getSong() {
+        return song;
+    }
+
+    public void setSong(String song) {
+        this.song = song;
     }
 }

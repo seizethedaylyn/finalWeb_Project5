@@ -15,6 +15,6 @@
 </head>
 <body>
 <h1>Hello world</h1>
-<p><a href = "board/list">게시판으로 이동</a></p>
+<p><a href = "board/list">게시판으로 이동하자</a></p>
 </body>
 </html>
