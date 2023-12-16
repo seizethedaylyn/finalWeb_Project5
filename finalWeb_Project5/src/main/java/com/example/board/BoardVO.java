@@ -1,9 +1,9 @@
-package com.example;
+package com.example.board;
 
 import java.util.Date;
 
 public class BoardVO {
-    private int playerId;
+    private int id; // 변경: playerId -> id
     private String playGroup;
     private String comment;
     private String name;
@@ -15,12 +15,12 @@ public class BoardVO {
     private int weight;
     private String song;
 
-    public int getPlayerId() {
-        return playerId;
+    public int getId() {
+        return id;
     }
 
-    public void setPlayerId(int playerId) {
-        this.playerId = playerId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPlayGroup() {

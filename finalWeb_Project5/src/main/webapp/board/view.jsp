@@ -1,7 +1,7 @@
-<jsp:useBean id="u" scope="request" type="com.example.BoardVO"/>
+<jsp:useBean id="u" scope="request" type="com.example.board.BoardVO"/>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<%@page import="com.example.BoardVO, com.example.BoardDAO" %>
+<%@page import="com.example.board.BoardVO, com.example.board.BoardDAO" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +23,7 @@
 
 <h1>Edit Player</h1>
 <form>
-    <input type="hidden" name="playerId" value="${u.playerId}"/>
+    <input type="hidden" name="playerId" value="${u.id}"/>
     <table>
         <tr>
             <td>Play Group:</td>

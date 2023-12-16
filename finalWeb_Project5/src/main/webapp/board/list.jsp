@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<%@page import="com.example.BoardDAO, com.example.BoardVO, java.util.*" %>
+<%@page import="com.example.board.BoardDAO, com.example.board.BoardVO, java.util.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -95,7 +95,7 @@
     </tr>
     <c:forEach items="${list}" var="u">
         <tr>
-            <td>${u.getPlayerId()}</td>
+            <td>${u.getId()}</td>
             <td>${u.getPlayGroup()}</td>
             <td>${u.getComment()}</td>
             <td>${u.getName()}</td>
@@ -106,9 +106,9 @@
             <td>${u.getHeight()}</td>
             <td>${u.getWeight()}</td>
             <td>${u.getSong()}</td>
-            <td><a href="view/${u.playerId}">⭐️</a></td>
-            <td><a href="editform/${u.playerId}">Edit</a></td>
-            <td><a href="javascript:delete_ok('${u.playerId}')">Delete</a></td>
+            <td><a href="view/${u.id}">⭐️</a></td>
+            <td><a href="editform/${u.id}">Edit</a></td>
+            <td><a href="javascript:delete_ok('${u.id}')">Delete</a></td>
         </tr>
     </c:forEach>
 </table>

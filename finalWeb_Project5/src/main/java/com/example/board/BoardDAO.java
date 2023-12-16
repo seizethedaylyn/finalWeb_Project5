@@ -1,13 +1,11 @@
-package com.example;
+package com.example.board;
 
-import com.example.BoardVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.jdbc.core.JdbcTemplate;
 //import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import java.sql.SQLException;
 import java.util.List;
 
 @Repository
@@ -20,15 +18,15 @@ public class BoardDAO {
         return result;
     }
 
-    public int deleteBoard(int CatID){
-        return sqlSession.delete("Board.deleteBoard", CatID);
+    public int deleteBoard(int id){
+        return sqlSession.delete("Board.deleteBoard", id);
     }
 
     public int updateBoard(BoardVO vo){
         return sqlSession.update("Board.updateBoard", vo);
     }
-    public BoardVO getBoard(int CatID){
-        BoardVO one = sqlSession.selectOne("Board.getBoard", CatID);
+    public BoardVO getBoard(int id){
+        BoardVO one = sqlSession.selectOne("Board.getBoard", id);
         return one;
     }
     public List<BoardVO> getBoardList(){

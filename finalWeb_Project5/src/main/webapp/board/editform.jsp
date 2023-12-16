@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="com.example.BoardDAO, com.example.BoardVO" %>
+<%@ page import="com.example.board.BoardDAO, com.example.board.BoardVO" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 
 <h1>Edit Form</h1>
 <form action="editok" method="post">
-    <input type="hidden" name="playerId" value="${u.playerId}"/>
+    <input type="hidden" name="playerId" value="${u.id}"/>
     <table>
         <tr>
             <td>Play Group:</td>
